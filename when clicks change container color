@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      change background color
+    </title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+     
+    </head>
+
+    <style>
+      *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+      }
+      body{
+        background-color:whitesmoke;
+      }
+      .container{
+        background-color: blue;
+        position: absolute;
+        top:20%;
+        left:5%;
+        height:50%;
+        border-radius:50%;
+      
+      }
+      .btn{
+        position: relative;
+        top:128px;
+        left:47%;
+
+      }
+    </style>
+    <body>
+     <div class="container" id="chg_btn">
+       <div class="chg_background">
+
+        <button type="button" class="btn btn-outline-primary" onclick="chg_color();"> click me</button>
+       </div>
+     </div>
+     <script>
+         
+          
+
+               function changeColor(color) {
+                document.getElementById('chg_btn').style.background = color;
+            }
+      
+            function chg_color() {
+                changeColor('green');
+
+            }
+       
+
+
+
+   
+     </script>
+    </body>
+  
+</html>
