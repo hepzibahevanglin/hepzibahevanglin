@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+     generate Random quotes
+    </title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+     
+</head>
+<style>
+    .container{
+        width:50%;
+    height: 70%;
+    background-image: url(backimg.jpg);
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    }
+    *{
+        top:0;
+        margin:0;
+        padding:0;
+    }
+    .sty_but{
+        position: relative;
+        top:65%;
+        left:43%;
+    }
+    p{
+       
+      color: white;
+      position: relative;
+      top:101px;
+      left:50px;
+    }
+    #generate{
+        border-radius: 50%;
+        width:16%;
+        border: none;
+    outline:none;
+    padding:12px 10px;
+        
+    }
+
+    #generate:hover, #generate:focus {
+     outline: none;
+}
+@media screen and (min-width:390px) {
+    p{
+        top:57px;
+        left:12px;
+    }
+    .sty_but{
+        top:50%;
+    }
+    
+}
+</style>
+<body>
+    <div class ="container-fluid">
+        <div class ="container">
+            <div>
+                <p id="quotes">QUOTES</p>
+
+            </div>
+            <div>
+                <p id="author">AUTHOR</p>
+            </div>
+            <div class="sty_but">
+            <button type="button"  id="generate">Generate</button>
+            <!-- <a href="https://www.startupjobsportal.com/2022/03/infosys-april-off-campus-drive.html">infosys</a>
+            <a href="https://www.startupjobsportal.com/2022/03/accenture-mass-hiring-off-campus-drive.html">infosys</a>
+            <a href="https://blog.kritikapattalam.com/build-a-random-quote-generator-using-javascript">random quotes</a> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        const generateQuotes = function(){
+            const quotes = [
+                {
+                    quote:"Do not pity the dead, Harry. Pity the living, and, above all those who live without love.",
+                    author:"Albus Dumbledore"
+                },
+                {
+                    quote: "It is impossible to manufacture or imitate love",
+                    author: "Horace Slughorn"
+                },
+                {
+                    quote: "Never trust anything that can think for itself if you can’t see where it keeps its brain.",
+                    author: "Arthur Weasley"
+                },
+                {
+                    quote: "Every human life is worth the same, and worth saving.",
+                    author: "Kingsley Shacklebolt"
+                },
+                {
+                    quote: "Every human life is worth the same, and worth saving.",
+                    author: "Kingsley Shacklebolt"
+                },
+                {
+                    quote: "Have a biscuit, Potter.",
+                    author: "Minerva McGonagall"
+                },
+                {
+                    quote: "Happiness can be found even in the darkest of times, if one only remembers to turn on the light.",
+                    author: "Albus Dumbledore"
+                },
+                {
+                    quote: "Socks are Dobby’s favorite, favorite clothes, sir!",
+                    author: "Dobby"
+                }
+
+            ];
+          
+            let arrayIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quotes').innerHTML = quotes[arrayIndex].quote;
+            document.getElementById('author').innerHTML = quotes[arrayIndex].author;
+        }
+            window.onload = function(){
+                generateQuotes();
+                document.getElementById('generate').addEventListener('click', generateQuotes);
+            }
+        
+        
+        </script>
+</body>
+
+</html>
